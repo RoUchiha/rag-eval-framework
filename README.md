@@ -4,6 +4,25 @@
 
 ---
 
+## Academic Background
+
+This project was built as a capstone application of concepts from the **[UT Austin AI & Machine Learning](https://onlineexeced.mccombs.utexas.edu/online-ai-machine-learning-course)** program (McCombs School of Business, 23-week executive program).
+
+Specific modules applied:
+
+| Module | Concept Applied |
+|--------|----------------|
+| **Course 03 — Generative AI for NLP** | RAG pipeline architecture — this project evaluates the exact pipeline type taught in the course: retriever → context → LLM generator |
+| **Course 03 — Generative AI for NLP** | Understanding LLM output quality and the need for systematic evaluation of language model responses |
+| **Course 05 — Deploying AI Solutions** | Streamlit dashboard for interactive AI application deployment; turning an evaluation harness into a usable product |
+| **Tools: LangChain** | The `LangChainRAGAdapter` wraps a LangChain retrieval chain — the same abstraction taught in the course for building RAG applications |
+| **Tools: HuggingFace `datasets`** | Loading and validating QA datasets using the HuggingFace `datasets` library covered in the curriculum |
+| **Tools: Streamlit** | Building the interactive evaluation dashboard — a core deployment tool in Course 05 |
+
+The course teaches you to *build* RAG pipelines. This project answers the next question the course raised but didn't fully resolve: **how do you know if your RAG pipeline is actually working?** RAGAS is the industry answer, and this framework wraps it in the clean abstraction pattern taught throughout the program.
+
+---
+
 ## What Is This?
 
 **RAG** (Retrieval-Augmented Generation) is the dominant architecture for building LLM applications that need to answer questions from private documents, knowledge bases, or real-time data. Instead of relying solely on what the model learned during training, a RAG system:
