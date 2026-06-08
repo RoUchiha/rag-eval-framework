@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rag-eval-framework"
+version = "0.1.0"
+description = "Modular RAG pipeline evaluation harness using RAGAS metrics"
+requires-python = ">=3.11"
+dependencies = [
+    "ragas>=0.1.9",
+    "langchain>=0.1.0",
+    "langchain-community>=0.0.20",
+    "langchain-openai>=0.0.8",
+    "anthropic>=0.25.0",
+    "datasets>=2.18.0",
+    "pandas>=2.2.0",
+    "plotly>=5.20.0",
+    "streamlit>=1.33.0",
+    "pydantic>=2.6.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.1.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=5.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rag_eval"]
